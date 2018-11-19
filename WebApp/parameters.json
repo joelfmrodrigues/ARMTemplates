@@ -1,0 +1,39 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "userId": {
+            "value": "255d3971-6919-4fc7-8296-22c4e9999ea0"
+        },
+        "components_Insights_name": {
+            "value": "Demo123AppDev"
+        },
+        "vaults_KeyVault_name": {
+            "value": "demo123appdev"
+        },
+        "storageAccounts_name": {
+            "value": "demo123appdev"
+        },
+        "storageAccounts_Container1_name": {
+            "value": "logs"
+        },
+        "serverfarms_AppService_name": {
+            "value": "Demo123AppDev"
+        },
+        "serverfarms_AppService_skuName": {
+            "value": "B1"
+        },
+        "serverfarms_AppService_skuCapacity": {
+            "value": 1
+        },
+        "sites_WebApp_name": {
+            "value": "Demo123AppDev"
+        },
+        "hostNameBindings_WebApp_name": {
+            "value": "Demo123AppDev.azurewebsites.net"
+        },        
+        "secrets_KeyVaultSecret1_name": {
+            "value": "testsecret1"
+        }        
+    }
+}
