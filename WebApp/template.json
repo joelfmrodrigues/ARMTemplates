@@ -63,7 +63,11 @@
         },
         "sites_WebApp_kind": {
             "defaultValue": "app",
-            "type": "string"
+            "type": "string",
+            "allowedValues": [
+                "app",
+                "api"
+            ],
         },
         "sites_WebApp_clientId": {
             "type": "string",
