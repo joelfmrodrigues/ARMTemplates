@@ -6,7 +6,7 @@ The Web App is using Managed Service Identity to access the Key Vault.
 
 The Web App settings contain the required keys to connect to the other resources.
 
-You can find detailed information about the template on [this blog post](https://joelfmrodrigues.wordpress.com).
+You can find detailed information about the template on [this blog post](https://joelfmrodrigues.wordpress.com/2018/11/19/reusable-arm-template-for-web-app/).
 
 ## Requirements
 
