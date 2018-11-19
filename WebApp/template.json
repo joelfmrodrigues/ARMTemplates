@@ -61,6 +61,16 @@
             "defaultValue": "WebAppName",
             "type": "string"
         },
+        "sites_WebApp_kind": {
+            "defaultValue": "app",
+            "type": "string"
+        },
+        "sites_WebApp_clientId": {
+            "type": "string",
+            "metadata": {
+                "description": "The client ID of the application identity that is used to secure the Web app."
+            }
+        },
         "hostNameBindings_WebApp_name": {
             "defaultValue": "webapp.azurewebsites.net",
             "type": "string"
@@ -159,7 +169,7 @@
         {
             "comments": "Sites",
             "type": "Microsoft.Web/sites",
-            "kind": "app",
+            "kind": "[parameters('sites_WebApp_kind')]",
             "name": "[parameters('sites_WebApp_name')]",
             "apiVersion": "2016-08-01",
             "location": "[resourceGroup().location]",
@@ -210,6 +220,24 @@
                         "[resourceId('Microsoft.Web/Sites', parameters('sites_WebApp_name'))]"
                     ],
                     "properties": {}
+                },
+                {
+                    "apiVersion": "2015-08-01",
+                    "name": "authsettings",
+                    "type": "config",
+                    "properties": {
+                        "enabled": true,
+                        "unauthenticatedClientAction": "RedirectToLoginPage",
+                        "tokenStoreEnabled": false,
+                        "allowedExternalRedirectUrls": null,
+                        "defaultProvider": "AzureActiveDirectory",
+                        "clientId": "[parameters('sites_WebApp_clientId')]",
+                        "issuer": "[concat('https://sts.windows.net/', subscription().tenantId , '/')]"
+                    },
+                    "dependsOn": [
+                        "[concat('Microsoft.Web/Sites/', parameters('sites_WebApp_name'))]",
+                        "Microsoft.ApplicationInsights.AzureWebSites"
+                    ]
                 },
                 {
                     "apiVersion": "2015-08-01",

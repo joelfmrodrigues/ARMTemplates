@@ -17,6 +17,8 @@ The following PowerShell commands will allow you to retrieve all the required in
 * Get-AzureRmSubscription
 * Get-AzureRmADUser -Mail '{AzureAdminEmailAddress}'
 
+Additionally, an Azure AD App Registration is required in order to configure Authentication.
+
 ## Deployment
 
 To deploy the template, simply use one of the deployment files provided for your platform of choice and provide the required parameters.

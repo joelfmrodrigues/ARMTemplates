@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "userId": {
-            "value": "255d3971-6919-4fc7-8296-22c4e9999ea0"
+            "value": "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX"
         },
         "components_Insights_name": {
             "value": "Demo123AppDev"
@@ -28,6 +28,12 @@
         },
         "sites_WebApp_name": {
             "value": "Demo123AppDev"
+        },
+        "sites_WebApp_kind": {
+            "value": "app"
+        },
+        "sites_WebApp_clientId": {
+            "value": "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX"
         },
         "hostNameBindings_WebApp_name": {
             "value": "Demo123AppDev.azurewebsites.net"
