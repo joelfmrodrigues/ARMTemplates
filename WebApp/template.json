@@ -309,7 +309,7 @@
             "location": "[resourceGroup().location]",
             "scale": null,
             "properties": {
-                "siteName": "parameters('sites_WebApp_name')",
+                "siteName": "[parameters('sites_WebApp_name')]",
                 "domainId": null,
                 "hostNameType": "Verified"
             },
